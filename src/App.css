@@ -1,38 +1,232 @@
-.App {
-  text-align: center;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #e1e8e3;
+    /* background-size: cover; */
+    /* position: relative; */
+}
+/* --------------------------NAVBAR DESIGN-------------------------------- */
+.Navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 75px;
+    background-color: rgb(15, 131, 176);
+    color: white;
+}
+.logo{
+    margin-left: 10px;
+    margin-top: 10px;
+    height: 45px;
+    border-radius: 50%;
+    border-color: blue;
+    background: rgb(208, 142, 18);
+}
+.nav-link{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    width: 75%;
+    padding: 20px;;
+}
+.nav-link li a:hover{
+    color: rgb(255, 203, 105);
+}
+.signup,
+.login {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    display: flex;
+    list-style: none
+}
+.signup li ,
+.login li a:hover{
+    color: rgb(240, 168, 34);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.Product,
+.Add-Product,
+.up-Product,
+.profile,
+.logout
+{
+   padding: 10px;
+   color: white;
+   text-decoration: none;
+   font-size: 20px;
+
+}
+.mobile-menu-icon{
+    display: none;
+}
+@media screen and (max-width:780px) {
+  .logo{
+    display: flex;
+    position: absolute;
+    top: 15px;
+    left: 35px;
+
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .nav-link{
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .nav-link-mobile{
+    position: absolute;
+    display: block;
+    list-style: none;
+    background-color: rgb(7, 74, 101);
+    left: 0;
+    top: 75px;
+    transition: all 0.5s ease-out;
+    width: 100%;
   }
+  .Product,
+  .Add-Product,
+  .up-Product,
+  .profile,
+  .logout
+  {
+    color: white;
+    text-align: center;
+    padding:10px;
+    width: 100%;
+    transition: all 0.5s ease;
+    border-top: 1px solid white;
+    display: inline-block;
+  }
+  .mobile-menu-icon{
+    display: block;
+    position: absolute;
+    font-size: 25px;
+    color: white;
+    background-color: rgb(15, 131, 176);
+    border: none;
+    outline: none;
+    top: 15px;
+    right: 25px;
+
 }
+}
+
+
+/*--------------------------FOOTER STYLING-------------------------------------------  */
+.footer{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    background-color: rgb(15, 131, 176);
+    color: white;
+}
+.footer,h2{
+     padding-top: 15px;
+}
+
+/*-------------------------SIGN UP PAGE DESIGN---------------------------------  */
+.inputBox{
+    display: block;
+    padding: 17px;
+    margin: 10px;
+    width: 300px;
+    border: 1px solid rgb(15, 131, 176);
+}
+.btnBox{
+    margin: 15px;
+    padding: 10px;
+    width: 160px;
+    background-color: rgb(3, 33, 45);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 50px;
+    font-weight: 500;
+}
+.btnBox:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+} 
+/*------------- Login page and SignUp Box--------------- */
+.LoginPage,.SignUp{
+    width: 400px;
+    height: 350px;
+    background-color:  rgb(74, 144, 171);
+    color: white;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left:50%;
+    top:50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+/* -------------------ADD PRODUCT PAGE STYLING----------------------------- */
+.add-product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+}
+.invalid-input{
+    color: red;
+    margin-top: -5px;
+    display: flex;
+    align-items: left;
+}
+
+/* ------------------------PRODUCTlIST DESIGN----------------------------------- */
+.list{
+    margin-top: 20px;
+}
+.product-list{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.product-list ul li{
+    display: inline-block;
+    border: 1px solid black;
+    width: 150px;
+    padding: 10px;
+    font-size: 20px;
+}
+.delete-Button i{
+    font-size: 17px;
+    background:0; 
+    color: rgb(195, 20, 20);
+    cursor: pointer;
+}
+.update-button{
+    margin-left: 30px;
+}
+.update-button i{
+    font-size: 17px;
+   color: blue;
+    cursor: pointer;
+}
+
+.search-box{
+     height:40px;
+     width: 300px;
+     padding-left: 10px;
+     border: 1px solid black;
+}
+.text{
+    margin-top: 20px;
+}
+
+.active{
+    color: rgb(255, 140, 0);
+}
+
